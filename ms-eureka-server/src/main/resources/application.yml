@@ -1,22 +1,3 @@
 spring:
-  application:
-    name: ms-eureka-server
- # config:
-  #  import: configserver:http://localhost:8888
-
-  cloud:
-    config:
-      enabled: false
-
-server:
-  port: 8761
-
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
+  config:
+    import: configserver:http://localhost:8888

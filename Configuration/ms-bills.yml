@@ -6,9 +6,9 @@ spring:
     name: ms-bills
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    password: #${MYSQL_PASSWORD}
-    url: #${MYSQL_URL}
-    username: #${MYSQL_USERNAME}
+    password: johr9Aeb
+    url: jdbc:mysql://db.ctd.academy:3306/pi21023c01_GRUPO1
+    username: pi21023c01_GRUPO1
   jpa:
     hibernate:
     ddl-auto: update

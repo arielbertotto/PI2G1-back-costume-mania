@@ -1,5 +1,29 @@
+server:
+  port: ${port:0}
+
 spring:
   application:
     name: ms-bills
-  config:
-    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: johr9Aeb
+    url: jdbc:mysql://db.ctd.academy:3306/pi21023c01_GRUPO1?useUnicode=true&characterEncoding=utf8&createDatabaseIfNotExist=true
+    username: pi21023c01_GRUPO1
+  jpa:
+    hibernate:
+    ddl-auto: update
+    show-sql: false
+
+
+
+message: hello from facturacion-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#
