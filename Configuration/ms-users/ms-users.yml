@@ -11,7 +11,7 @@ spring:
 #  ------ cloud parameters to exclude if local test is needed ------
 #  cloud:
 #    config:
-#      enabled: false 
+#      enabled: false
   datasource:
     driverClassName: ${DDBB_USERNAME:com.mysql.cj.jdbc.Driver}
     url: ${DDBB_URL:jdbc:mysql://db.ctd.academy:3306/pi21023c01_GRUPO1}
