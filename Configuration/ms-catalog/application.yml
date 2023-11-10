@@ -6,19 +6,19 @@ spring:
     name: ms-catalog
   datasource:
     driverClassName: ${DDBB_USERNAME:com.mysql.cj.jdbc.Driver}
-    url: ${DDBB_URL}
-    username: ${DDBB_USERNAME}
-    password: ${DDBB_PASSWORD}
-    jpa:
-      open-in-view: false
-      show-sql: true
+    url: ${DDBB_URL:jdbc:mysql://db.ctd.academy:3306/pi21023c01_GRUPO1}
+    username: ${DDBB_USERNAME:pi21023c01_GRUPO1}
+    password: ${DDBB_PASSWORD:johr9Aeb}
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
-      properties:
-        hibernate:
-          dialect: ${DDBB_DIALECT:org.hibernate.dialect.MySQL8Dialect}
-          format_sql: true
-      defer-datasource-initialization: true
+        dialect: ${DDBB_DIALECT:org.hibernate.dialect.MySQL8Dialect}
+        format_sql: true
+    defer-datasource-initialization: true 
 
 message: hello from ms-catalog
 
@@ -32,3 +32,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.aplication.name}:${random.uuid}
