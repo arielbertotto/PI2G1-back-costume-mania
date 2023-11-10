@@ -9,6 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/arielbertotto/PI2G1-back-costume-mania
-          force-pull: true
+          label: Develop
           search-paths: Configuration/{application}
+          force-pull: true
           clone-on-start: true
