@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: ms-product
+#  profiles:
+#    active: ${PROFILE:default}
+#  ------ cloud parameters to exclude if local test is needed ------
+#  cloud:
+#    config:
+#      enabled: false
   datasource:
     driverClassName: ${DDBB_USERNAME:com.mysql.cj.jdbc.Driver}
     url: ${DDBB_URL:jdbc:mysql://db.ctd.academy:3306/pi21023c01_GRUPO1}
@@ -16,7 +22,6 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: ${DDBB_DIALECT:org.hibernate.dialect.MySQL8Dialect}
         format_sql: true
     defer-datasource-initialization: true 
 

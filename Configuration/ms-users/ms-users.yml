@@ -8,7 +8,7 @@ spring:
     name: ms-users
 #  profiles:
 #    active: ${PROFILE:default}
-  ------ cloud parameters to exclude if local test is needed ------
+#  ------ cloud parameters to exclude if local test is needed ------
 #  cloud:
 #    config:
 #      enabled: false 
@@ -24,7 +24,6 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: ${DDBB_DIALECT:org.hibernate.dialect.MySQL8Dialect}
         format_sql: true
     defer-datasource-initialization: true 
 

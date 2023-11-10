@@ -26,7 +26,6 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: ${DDBB_DIALECT:org.hibernate.dialect.MySQL8Dialect}
         format_sql: true
     defer-datasource-initialization: true 
 
