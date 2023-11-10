@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ms-catalog
+  config:
+    import: configserver:http://localhost:8888
+
+eureka:
+  client:
+    enabled: true

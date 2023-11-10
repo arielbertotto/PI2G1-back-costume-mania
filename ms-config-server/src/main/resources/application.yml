@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:8888}
+
+spring:
+  application:
+    name: ms-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/arielbertotto/PI2G1-back-costume-mania
+          default-label: Develop
+          search-paths: Configuration/{application}
+          clone-on-start: true
+          force-pull: true
+
