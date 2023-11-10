@@ -30,7 +30,7 @@ spring:
         format_sql: true
     defer-datasource-initialization: true 
 
-message: hello from facturacion-service
+message: hello from ms-bills
 
 management:
   endpoints:
@@ -39,8 +39,8 @@ management:
         include: '*'
 
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.aplication.name}:${random.uuid}
